@@ -1,29 +1,29 @@
-# Rummikub AI (React + Vite)
+# Rummikub AI
 
-משחק רמי פתוח בדפדפן, בעברית ובכיוון RTL. מנוע המשחק שודרג לגרסה 2.
+React + Vite browser game for playing open Rummikub against computer opponents.
 
-## הפעלה מקומית
-1. התקן Node.js 18 ומעלה.
-2. פתח טרמינל בתיקייה.
-3. הרץ `npm install`
-4. הרץ `npm run dev`
-5. פתח את כתובת ה-localhost שמוצגת בטרמינל.
+## Install
 
-## בנייה לפרסום
-`npm run build` ייצור את תיקיית `dist`.
+```powershell
+npm.cmd install
+```
 
-## מה כלול
-- 2–4 שחקנים, כולל המשתמש.
-- 106 אבנים (שני עותקים של 1–13 בארבעה צבעים ושני ג'וקרים).
-- פתיחה ראשונית של 30 נקודות.
-- יצירת רצפים וקבוצות.
-- טיוטת שולחן ואימות שכל הקבוצות חוקיות בסיום תור.
-- העברת אבנים מהשולחן למעמד לצורך ארגון מחדש.
-- מחשבים שמחפשים צירופים מתוך היד ויכולים לנסות לשלב אבנים לתוך סדרות קיימות ולארגן מחדש את השולחן.
-- תמיכה בג'וקר כתחליף למספר חסר ברצף או לצבע חסר בקבוצה.
-- בדיקות למניעת אובדן או שכפול אבנים במהלך מהלך.
-- משיכת אבן וערבוב מחדש של הקופה כאשר היא מתרוקנת.
-- ממשק רספונסיבי בעברית.
+## Run locally
 
-## הערת מצב
-זהו MVP מתקדם להרחבה. ה-AI כולל חיפוש צירופים וניסיון לסידור מחדש של השולחן, אך רמות הקושי עדיין משתמשות באותו עיקרון עם מגבלות חיפוש שונות. יש לבצע בדיקות משחק מקיפות, במיוחד סביב ג'וקרים וסידורים מורכבים, לפני פרסום לציבור.
+```powershell
+npm.cmd run dev
+```
+
+## Build
+
+```powershell
+npm.cmd run build
+```
+
+## Rules regression tests
+
+```powershell
+npm.cmd test
+```
+
+Opening rule: a player may place new melds worth at least 30 points from their own rack even if opponents already have melds on the table. Before opening, existing table melds must remain unchanged.
